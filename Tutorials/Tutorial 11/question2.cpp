@@ -1,7 +1,7 @@
 // Tutorial 11 Question 2
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -10,17 +10,17 @@ class Employee
 {
 	private:
 	    int EmpID;
-	    string EmpName;
+	    char EmpName[30];
 	    int YearJoined;
 	    int Status;  // 0 - Temporary, 1 - Permanent
 	    float BasicSalary;
 	
 	public:
 	    // Constructor
-	    Employee(int empID, string empName, int yearJoined, int status, float basicSalary) 
+	    Employee(int empID, char empName[30], int yearJoined, int status, float basicSalary) 
 		{
 	        EmpID = empID;
-	        EmpName = empName;
+	        strcpy(EmpName,empName);
 	        YearJoined = yearJoined;
 	        Status = status;
 	        BasicSalary = basicSalary;

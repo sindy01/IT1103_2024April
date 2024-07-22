@@ -1,7 +1,7 @@
 // Tutorial 11 Question 1
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -10,16 +10,16 @@ class Meal
 {
 	private:
 	    int MealNo;
-	    string Description;
+	    char Description[20];
 	    int NoofMealsAvailable;
 	    double Price;
 	
 	public:
 	    // Constructor
-	    Meal(int mealNo, string description, int noOfMealsAvailable, double price) 
+	    Meal(int mealNo, char description[20], int noOfMealsAvailable, double price) 
 		{
 	        MealNo = mealNo;
-	        Description = description;
+	        strcpy(Description,description);
 	        NoofMealsAvailable = noOfMealsAvailable;
 	        Price = price;
 	    }
